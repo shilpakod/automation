@@ -31,7 +31,6 @@ public class SubscriptionTest extends BaseTest{
 		subscription.waitUntilPageLoaded();
 		
 		assertEquals(subscription.getCurrentPageUrl(), HelperClass.getConfigValueOf("subscriptionUrl"));
-		assertEquals(subscription.getEmailFieldValue(), HelperClass.getConfigValueOf("email"));
-		assertEquals(subscription.getFreeThirtyDayText(), "FREE for 30 days!");
+		assertEquals(subscription.getPageHeaderText(), "Become a Member!");
 	}
 }

@@ -15,7 +15,7 @@ public class SubscriptionPage extends BasePage {
 
 	
 	WebElement emailField() {
-		return getJavascriptElement("#email-input");
+		return getJavascriptElement("#email");
 	}
 
 	
@@ -26,6 +26,10 @@ public class SubscriptionPage extends BasePage {
 	WebElement continueButton() {
 		return getJavascriptElement("#continue-button");
 	}
+	
+	WebElement becomeMemberText() {
+		return getJavascriptElement("#become-member");
+	}
 
 	public SubscriptionPage(WebDriver driver) {
 		super(driver);
@@ -34,7 +38,7 @@ public class SubscriptionPage extends BasePage {
 
 	@Override
 	public void waitUntilPageLoaded() throws InterruptedException {
-		HelperClass.waitUntilElementPresent(driver, "#email-input");
+		HelperClass.waitUntilElementPresent(driver, "#subscription-form > h2");
 	}
 
 	public String getEmailFieldValue() {
@@ -45,8 +49,8 @@ public class SubscriptionPage extends BasePage {
 		return continueButton().isDisplayed();
 	}
 
-	public String getFreeThirtyDayText() {
-		return freeText().getText();
+	public String getPageHeaderText() {
+		return becomeMemberText().getText();
 	}
 
 }

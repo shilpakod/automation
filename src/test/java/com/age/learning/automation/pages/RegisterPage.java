@@ -8,10 +8,6 @@ import com.age.learning.automation.helper.HelperClass;
 
 public class RegisterPage extends BasePage {
 
-	WebElement becomeMemberText() {
-		return getJavascriptElement("#become-member");
-	}
-
 	
 	WebElement emailField() {
 		return getJavascriptElement("#email");
