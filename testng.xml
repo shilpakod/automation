@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation">
+
+	<test name="Subscription Test">
+		<parameter name="browser" value="${browser}"></parameter>
+		<classes>
+			<class name="com.age.learning.automation.tests.SubscriptionTest" />
+		</classes>
+	</test>
+</suite>
